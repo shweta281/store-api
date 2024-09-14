@@ -6,8 +6,11 @@ const notFoundMiddleware = require("./middleware/not-found");
 const route = require("./routes/product");
 const errorHandler = require("./middleware/error-handler");
 const app = express();
+// app.set('trust proxy', true)
 
 app.get("/", (req, res) => {
+  // console.log(req.ip);
+  
   res.send("hello hehe");
 });
 
